@@ -1,0 +1,62 @@
+{
+  "name": "mobile",
+  "sourceRoot": "apps/mobile",
+  "projectType": "application",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm run start",
+        "cwd": "apps/mobile"
+      }
+    },
+    "android": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm run android",
+        "cwd": "apps/mobile"
+      }
+    },
+    "ios": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm run ios",
+        "cwd": "apps/mobile"
+      }
+    },
+    "web": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm run web",
+        "cwd": "apps/mobile"
+      }
+    },
+    "prebuild": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm run prebuild",
+        "cwd": "apps/mobile"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/mobile/jest.config.js"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm run type-check",
+        "cwd": "apps/mobile"
+      }
+    }
+  },
+  "tags": []
+} 

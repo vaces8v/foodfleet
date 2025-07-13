@@ -4,10 +4,10 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/foodfleet-landing-e2e"
+      "path": "./apps/landing-e2e"
     },
     {
-      "path": "./apps/foodfleet-landing"
+      "path": "./apps/landing"
     }
   ]
 }

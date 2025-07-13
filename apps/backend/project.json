@@ -1,0 +1,12 @@
+{
+    "name": "backend",
+    "targets": {
+      "serve": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "poetry run uvicorn app.main:app --reload --port 8000",
+          "cwd": "apps/backend"
+        }
+      }
+    }
+  }

@@ -1,82 +1,156 @@
-# Foodfleet
+# 🚀 FoodFleet
+
+<div align="center">
+  
+  ![FoodFleet](https://img.shields.io/badge/FoodFleet-Platform-brightgreen)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+  ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)
+  ![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white)
+  ![Expo](https://img.shields.io/badge/Expo-000020?logo=expo&logoColor=white)
+  ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+  ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+  ![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white)
+  ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+  ![Jest](https://img.shields.io/badge/Jest-C21325?logo=jest&logoColor=white)
+  ![Test Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+  ![Nx](https://img.shields.io/badge/Nx-143055?logo=nx&logoColor=white)
+  
+  <img src="./assets/header.png" alt="FoodFleet Logo" width="500"/>
+  
+  **Современная мультиплатформенная система для управления сервисами доставки еды**
+</div>
+
+> ⚠️Примечание: Этот проект вымышленный. Он создан исключительно для учебных целей.
+
+## 📱 Структура проекта
+
+FoodFleet — это монорепозиторий на базе Nx, включающий следующие приложения:
+
+```
+foodfleet/
+├─ apps/
+│  ├─ backend/     # Python backend API
+│  ├─ landing/     # Next.js landing page
+│  ├─ mobile/      # React Native mobile app
+```
+
+## 🛠️ Технологии
+
+- **Frontend**: React, Next.js, TypeScript
+- **Mobile**: React Native, Expo
+- **Backend**: Python, FastAPI, Redis
+- **DevOps**: NX монорепозиторий, Docker, CI/CD с GitHub Actions
+- **Тестирование**: Jest, Cypress
+
+## ⚡ Быстрый старт
+
+### Предварительные требования
+
+- Node.js (v18+)
+- npm или pnpm
+- Python 3.9+
+
+### Установка
+
+```bash
+# Клонировать репозиторий
+git clone https://github.com/vaces8v/foodfleet.git
+cd foodfleet
+
+# Установить зависимости
+npm install
+```
+
+## 🚀 Запуск приложений
+
+### Landing (Next.js)
+
+```bash
+npx nx serve landing
+```
+
+Приложение будет доступно по адресу: http://localhost:4200
+
+### Mobile (Expo)
+
+```bash
+npx nx run mobile:start
+```
+
+### Backend (Python)
+
+```bash
+npx nx serve backend
+```
+
+API будет доступно по адресу: http://localhost:8000
+
+## 🧪 Запуск тестов
+
+```bash
+# Запуск всех тестов
+npx nx run-many -t test
+
+# Запуск тестов для конкретного приложения
+npx nx test landing
+npx nx test mobile
+```
+
+## 📊 Статус CI/CD
+
+Проект использует GitHub Actions для автоматического тестирования и деплоя.
+
+```
+npx nx affected -t test,lint,build
+```
+
+---
+
+## 📚 Документация Nx
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+### Выполнение задач
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
-
-## Finish your CI setup
-
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/QWoBr7f0Nt)
-
-
-## Run tasks
-
-To run the dev server for your app, use:
+Для запуска dev-сервера используйте:
 
 ```sh
-npx nx dev foodfleet-landing
+npx nx serve landing
 ```
 
-To create a production bundle:
+Для создания production-сборки:
 
 ```sh
-npx nx build foodfleet-landing
+npx nx build landing
 ```
 
-To see all available targets to run for a project, run:
+Чтобы увидеть все доступные задачи для проекта:
 
 ```sh
-npx nx show project foodfleet-landing
+npx nx show project landing
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+### Добавление новых проектов
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
+Вы можете использовать [Nx plugins](https://nx.dev/concepts/nx-plugins) для создания новых проектов:
 
 ```sh
-npx nx g @nx/next:app demo
+# Создание нового Next.js приложения
+npx nx g @nx/next:app новое-приложение
+
+# Создание новой React библиотеки
+npx nx g @nx/react:lib моя-библиотека
 ```
 
-To generate a new library, use:
+### Полезные ссылки
 
-```sh
-npx nx g @nx/react:lib mylib
-```
+- [Документация Nx](https://nx.dev)
+- [Nx на CI](https://nx.dev/ci/intro/ci-with-nx)
+- [Nx Console для VS Code](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
+- [Сообщество Nx: Discord](https://go.nx.dev/community)
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+### Установка Nx Console
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Nx Console — расширение для редактора, которое улучшает ваш опыт разработки.
 
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+[Установить Nx Console »](https://nx.dev/getting-started/editor-setup)
