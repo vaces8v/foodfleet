@@ -15,7 +15,7 @@
   ![Test Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
   ![Nx](https://img.shields.io/badge/Nx-143055?logo=nx&logoColor=white)
   
-  <img src="./assets/header.png" alt="FoodFleet Logo" width="500"/>
+  <img src="./assets/header.png" alt="FoodFleet Logo" width="800"/>
   
   **Современная мультиплатформенная система для управления сервисами доставки еды**
 </div>
