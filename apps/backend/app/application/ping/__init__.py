@@ -1,0 +1,1 @@
+"""Ping application module"""
